@@ -15,7 +15,12 @@ public class CalculateTwoNumbers{
         JOptionPane.showMessageDialog(null, "Sum: " + Double.toString(num1+num2));
         JOptionPane.showMessageDialog(null, "Difference: " + Double.toString(num1-num2));
         JOptionPane.showMessageDialog(null, "Product: " + Double.toString(num1*num2));
-        JOptionPane.showMessageDialog(null, "Quotient: " + Double.toString(num1/num2));
+        if (num2 != 0) {
+            double quotient = num1/num2;
+            JOptionPane.showMessageDialog(null, "Quotient: " + quotient);
+        } else {
+            JOptionPane.showMessageDialog(null, "Error: Division by zero!");
+        }        
         System.exit(0);
     }
 }
